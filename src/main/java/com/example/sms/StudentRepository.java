@@ -5,10 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 
-@Repository //To tell java ki this is the Reposi
+@Repository
 public class StudentRepository {
-
-
 
     HashMap<Integer,Student> studentDb = new HashMap<>();
 
@@ -31,7 +29,7 @@ public class StudentRepository {
 
     Student getStudentByNameFromDb(String searchName){
 
-        for(Student s:studentDb.values()){
+        for(Student s : studentDb.values()){
             if(s.name.equals(searchName)){
                 return s;
             }
